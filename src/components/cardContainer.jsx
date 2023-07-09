@@ -11,6 +11,7 @@ const CardContainer = () => {
         id="searchplayer"
         aria-describedby="searchplayer"
         className="w-25 m-auto mt-1"
+        placeholder="Search Player..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
