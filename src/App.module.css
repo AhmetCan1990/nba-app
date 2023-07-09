@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+.mainContainer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #fdbb2d, #22c1c3);
+  min-height: 100vh;
+}
+.header {
+  font-family: "Faster One", cursive;
+  font-size: 5rem;
+  color: #006eb9;
+  & > span {
+    color: #e42a51;
+  }
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+  width: 87%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-image: url("./assets/cool-nba.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  background-origin: initial;
+}
+.playerCard {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  border-radius: 0.7rem;
+  background-color: #f7f7f7;
+  &:hover {
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.5);
+  }
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+    transition: padding, 0.3s;
+    &:hover {
+      padding: 1rem;
+      border-radius: 0.7rem;
+    }
+  }
+  .namebox {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    background-color: rgb(235, 235, 235);
+    padding: 10px 15px;
+    text-align: left;
+    border-top: 1px solid rgb(211, 211, 211);
+  }
+}
+.statistics {
+  display: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 350px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-left: 3rem;
+}
+.visible {
+  display: none;
+}
