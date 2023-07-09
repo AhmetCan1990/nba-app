@@ -45,10 +45,9 @@
     object-fit: cover;
     border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
-    transition: padding, 0.3s;
+    transition: padding 0.3s;
     &:hover {
       padding: 1rem;
-      border-radius: 0.7rem;
     }
   }
   .namebox {
