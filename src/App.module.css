@@ -80,7 +80,7 @@
 .crossContainer {
   position: relative;
   display: flex;
-  width: 70%;
+  width: 35%;
   margin: 0.5rem auto;
   & i {
     position: absolute;
