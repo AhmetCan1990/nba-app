@@ -6,16 +6,20 @@ const CardContainer = () => {
   const [search, setSearch] = useState("");
   return (
     <>
-      <Form.Control
-        type="text"
-        id="searchplayer"
-        aria-describedby="searchplayer"
-        className="w-25 m-auto mt-1"
-        placeholder="Search Player..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
+      <div className={appStyle.crossContainer}>
+        <Form.Control
+          type="text"
+          id="searchplayer"
+          aria-describedby="searchplayer"
+          className={appStyle.input}
+          placeholder="Search Player..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        {search.length > 0 && (
+          <i onClick={() => setSearch("")} className="fa-solid fa-xmark"></i>
+        )}
+      </div>
       <div className={appStyle.cardContainer}>
         <PlayerCard search={search} />
       </div>
