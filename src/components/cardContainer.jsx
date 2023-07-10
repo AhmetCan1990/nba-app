@@ -8,7 +8,7 @@ const CardContainer = () => {
     <>
       <div className={appStyle.crossContainer}>
         <Form.Control
-          type="text"
+          type="search"
           id="searchplayer"
           aria-describedby="searchplayer"
           className={appStyle.input}
@@ -16,9 +16,6 @@ const CardContainer = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        {search.length > 0 && (
-          <i onClick={() => setSearch("")} className="fa-solid fa-xmark"></i>
-        )}
       </div>
       <div className={appStyle.cardContainer}>
         <PlayerCard search={search} />

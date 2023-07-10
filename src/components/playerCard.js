@@ -17,8 +17,8 @@ const PlayerCard = ({ search }) => {
     <>
       {data.map(
         ({ name: playerName, img, statistics }, index) =>
-          search.toLowerCase() ===
-            playerName.slice(0, search.length).toLowerCase() && (
+          search.trim().toLowerCase() ===
+            playerName.slice(0, search.trim().length).toLowerCase() && (
             <div
               onClick={handleToggle}
               key={index}
@@ -26,11 +26,11 @@ const PlayerCard = ({ search }) => {
             >
               <img className={appStyle.image} src={img} alt="player" />
               <div className={appStyle.statistics}>
-                <p>🏀 {statistics[0]}</p>
-                <p>🏀 {statistics[1]}</p>
-                <p>🏀 {statistics[2]}</p>
-                <p>🏀 {statistics[3]}</p>
+                {statistics.map((item, index) => (
+                  <p key={index}>🏀 {item}</p>
+                ))}
               </div>
+
               <div className={appStyle.namebox}>
                 <h5>{playerName}</h5>
               </div>
